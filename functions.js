@@ -13,13 +13,14 @@ const functions = {
     const abc = 'abcdefghijklmnopqrstuvwxyz'.split('');
     const encrypted = [];
     string.toLowerCase().split('')
-      .map((value) => {
-        if (abc.indexOf(value) === -1)
+      .forEach((value) => {
+        if (abc.indexOf(value) === -1) {
           if (value === ' ') {
-            encrypted.push(' ')
+            encrypted.push(' ');
           } else {
-            false
+            false;
           }
+        }
         else {
           encrypted.push(abc[(abc.indexOf(value) + key) % 26])
         }
@@ -30,7 +31,7 @@ const functions = {
     const abc = 'abcdefghijklmnopqrstuvwxyz'.split('');
     const decrypted = [];
     string.toLowerCase().split('')
-      .map((value) => {
+      .forEach((value) => {
         if (abc.indexOf(value) === -1) {
           if (value === ' ') {
             decrypted.push(' ');
