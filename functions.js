@@ -34,6 +34,17 @@ const functions = {
             encrypted.push(abc[((abc.indexOf(value) - key) % 26)]);
       });
     return encrypted.join('');
-  })
+  }),
+	analyzeArray: (arr) => {
+    return {
+      average: Math.floor(arr.reduce((sum, num) => {
+        return sum + num;
+      }) / arr.length),
+      min: Math.min(...arr),
+      max: Math.max(...arr),
+      length: arr.length,
+    }
+  }
 };
+console.log(functions.analyzeArray([6, 7, 2, 5]))
 module.exports = functions;
