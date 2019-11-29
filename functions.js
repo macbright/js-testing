@@ -20,9 +20,8 @@ const functions = {
           } else {
             false;
           }
-        }
-        else {
-          encrypted.push(abc[(abc.indexOf(value) + key) % 26])
+        }else {
+          encrypted.push(abc[(abc.indexOf(value) + key) % 26]);
         }
       });
     return encrypted.join('');
