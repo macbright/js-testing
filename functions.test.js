@@ -43,8 +43,7 @@ test('analyzeArray ', () => {
     min: 2,
     max: 7,
     length: 4
-  })
-
+  });
 });
 
 test('analyzeArray ', () => {
@@ -53,6 +52,5 @@ test('analyzeArray ', () => {
     min: 1,
     max: 8,
     length: 6
-  })
-
+  });
 });

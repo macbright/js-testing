@@ -3,6 +3,3 @@ linters:
     config: './eslint.config'
 files:
   ignore:
-      - 'dist/*'
-      - './function.test.js'
-      - './function.js'
