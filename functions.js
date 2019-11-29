@@ -1,4 +1,7 @@
 
+/* global test, expect*/
+/* eslint no-undef: "error" */
+
 const functions = {
   capitalize: string => string[0].toUpperCase() + string.slice(1),
   reverseString: (string) => string.split('').reverse().join(''),
@@ -10,7 +13,7 @@ const functions = {
   },
   encrypt: ((string, key) => {
     const abc = 'abcdefghijklmnopqrstuvwxyz'.split('');
-    encrypted = [];
+    const encrypted = [];
     string.toLowerCase().split('')
       .map((value) => {
         abc.indexOf(value) === -1 ?
@@ -18,22 +21,22 @@ const functions = {
           :
           encrypted.push(abc[(abc.indexOf(value) + key) % 26])
       });
-    return encrypted.join('')
+    return encrypted.join('');
   }),
   decrypt: ((string, key) => {
     const abc = 'abcdefghijklmnopqrstuvwxyz'.split('');
-    encrypted = [];
+    const decrypted = [];
     string.toLowerCase().split('')
       .map((value) => {
         abc.indexOf(value) === -1 ?
-          value === ' ' ? encrypted.push(' ') : false
+          value === ' ' ? decrypted.push(' ') : false
           :
           (abc.indexOf(value) - key) % 26 < 0 ?
-            encrypted.push(abc[((abc.indexOf(value) - key) % 26) + 26])
+            decrypted.push(abc[((abc.indexOf(value) - key) % 26) + 26])
             :
-            encrypted.push(abc[((abc.indexOf(value) - key) % 26)]);
+            decrypted.push(abc[((abc.indexOf(value) - key) % 26)]);
       });
-    return encrypted.join('');
+    return decrypted.join('');
   }),
 	analyzeArray: (arr) => {
     return {
@@ -46,5 +49,5 @@ const functions = {
     }
   }
 };
-console.log(functions.analyzeArray([6, 7, 2, 5]))
+
 module.exports = functions;

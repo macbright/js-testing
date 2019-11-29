@@ -1,4 +1,7 @@
 
+/* global test, expect */
+/* eslint no-undef: "error" */
+
 const functions = require('./functions');
 
 test('capitalize should Capitalize the string', () => {
@@ -26,12 +29,12 @@ test('calculate by multiplying two numbers', () => {
 });
 
 test('cipher encryption', () => {
-  expect(functions.encrypt("a and, b", 1)).toBe("b boe c");
-  expect(functions.encrypt("hello world", 5)).toBe("mjqqt btwqi");
+  expect(functions.encrypt('a and, b', 1)).toBe('b boe c');
+  expect(functions.encrypt('hello world', 5)).toBe('mjqqt btwqi');
 });
 test('cipher decryption', () => {
-  expect(functions.decrypt("b boe, c", 1)).toBe("a and b");
-  expect(functions.decrypt("mjqqt btwqi", 5)).toBe("hello world");
+  expect(functions.decrypt('b boe, c', 1)).toBe('a and b');
+  expect(functions.decrypt('mjqqt btwqi', 5)).toBe('hello world');
 });
 
 test('analyzeArray ', () => {
