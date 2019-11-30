@@ -1,4 +1,4 @@
-/*eslint operator-linebreak: ["error", "before"]*/
+/* eslint operator-linebreak: ["error", "before"] */
 
 const calculator = {
     add: (a, b) => a + b,

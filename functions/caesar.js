@@ -1,4 +1,4 @@
-/*eslint operator-linebreak: ["error", "before"]*/
+/* eslint operator-linebreak: ["error", "before"] */
 
 const caesar = {
 	encrypt: ((string, key) => {
@@ -10,9 +10,9 @@ const caesar = {
 					if (value === ' ') {
 						encrypted.push(' ');
 					} else {
-						false;
+						false; /*eslint-disable-line no-unused-expressions */
 					}
-				}else {
+				} else {
 					encrypted.push(abc[(abc.indexOf(value) + key) % 26]);
 				}
 			});
@@ -27,10 +27,10 @@ const caesar = {
           if (value === ' ') {
             decrypted.push(' ');
           } else {
-            false;
+            false; /*eslint-disable-line no-unused-expressions */
           }
         } else {
-          if ((abc.indexOf(value) - key) % 26 < 0) {
+          if ((abc.indexOf(value) - key) % 26 < 0) { /*eslint-disable-line no-lonely-if */
             decrypted.push(abc[((abc.indexOf(value) - key) % 26) + 26]);
           } else {
             decrypted.push(abc[((abc.indexOf(value) - key) % 26)]);
@@ -38,7 +38,7 @@ const caesar = {
         }
       });
     return decrypted.join('');
-  }),
+  })
 };
 
 module.exports = caesar;

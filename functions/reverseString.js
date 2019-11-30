@@ -1,4 +1,4 @@
-/*eslint operator-linebreak: ["error", "before"]*/
+/* eslint operator-linebreak: ["error", "before"] */
 
 const reverseString = string => string.split('').reverse().join('');
 
