@@ -10,7 +10,7 @@ const caesar = {
 					if (value === ' ') {
 						encrypted.push(' ');
 					} else {
-						false; /*eslint-disable-line no-unused-expressions */
+						false; /* eslint-disable-line no-unused-expressions */
 					}
 				} else {
 					encrypted.push(abc[(abc.indexOf(value) + key) % 26]);
@@ -27,10 +27,10 @@ const caesar = {
           if (value === ' ') {
             decrypted.push(' ');
           } else {
-            false; /*eslint-disable-line no-unused-expressions */
+            false; /* eslint-disable-line no-unused-expressions */
           }
         } else {
-          if ((abc.indexOf(value) - key) % 26 < 0) { /*eslint-disable-line no-lonely-if */
+          if ((abc.indexOf(value) - key) % 26 < 0) { /* eslint-disable-line no-lonely-if */
             decrypted.push(abc[((abc.indexOf(value) - key) % 26) + 26]);
           } else {
             decrypted.push(abc[((abc.indexOf(value) - key) % 26)]);
