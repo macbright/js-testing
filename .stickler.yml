@@ -3,6 +3,4 @@ linters:
     config: './eslint.config'
 files:
   ignore:
-      - 'dist/*'
-      - 'src/*'
-      - 'webpack.config.js'
+      - 'functions.js'
